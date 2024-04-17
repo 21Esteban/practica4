@@ -1,4 +1,7 @@
 #include "enrutador.h"
+#include<iostream>
+
+using namespace std;
 
 Enrutador::Enrutador(char nombre) {
     this->nombre = nombre;
@@ -29,7 +32,7 @@ int Enrutador::obtenerCosto(char destino){
 }
 
 
-void Enrutador::imprimirTablaEnrutamiento() const {
+void Enrutador::imprimirTablaEnrutamiento() {
     cout << "Tabla de enrutamiento del enrutador " << this->nombre << ":\n";
     for (auto iterador = this->tablaEnrutamiento.begin();iterador != this->tablaEnrutamiento.end();iterador++) {
         cout << "Destino: " << iterador->first << ", Costo: " << iterador->second << "\n";

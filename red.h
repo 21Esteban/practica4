@@ -15,6 +15,7 @@ public:
     void eliminarEnrutador(char nombreEnrutador);
     Enrutador* obtenerEnrutador(char nombreEnrutador);
     void imprimirTablaEnrutamientoRed() const;
+    void mostrarEnrutadores();
 };
 
 #endif // RED_H

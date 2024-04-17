@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/laura/OneDrive/Desktop/PracticasInfo/practica4",
-      "program": "c:/Users/laura/OneDrive/Desktop/PracticasInfo/practica4/build/Debug/outDebug",
+      "cwd": "c:/Users/moroc/Desktop/PracticasInfo/practica4",
+      "program": "c:/Users/moroc/Desktop/PracticasInfo/practica4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
