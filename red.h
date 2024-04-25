@@ -1,21 +1,27 @@
 #ifndef RED_H
 #define RED_H
 #include<string>
+#include <unordered_map>
+#include <map>
 #include<vector>
 
 #include "enrutador.h"
 
 class Red{
     string nombre;
-    vector<Enrutador> enrutadores;
+    unordered_map<char,Enrutador> enrutadores;
 
 public:
     Red();
-    void agregarEnrutador(Enrutador enrutador);
+    void agregarEnrutador(char nombre);
     void eliminarEnrutador(char nombreEnrutador);
-    Enrutador* obtenerEnrutador(char nombreEnrutador);
-    void imprimirTablaEnrutamientoRed() const;
+    void obtenerEnrutador(char nombreEnrutador);
+    void actualizarTablaEnrutamiento(char nombreEnrutador, map<char, int> tablaEnrutamiento);
+    void imprimirTablaEnrutamientoRed() ;
     void mostrarEnrutadores();
+    void enlazarEnrutadores(char Enrutador1, char Enrutador2, int costo) ;
+    void setearEnrutadoresDesdeArchivo(string filename);
+    pair<int, vector<char>>rutaMasCorta(char enrutadorInicio, char enrutadorFinal);
 };
 
 #endif // RED_H

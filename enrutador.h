@@ -14,6 +14,7 @@ private:
 
 
 public:
+    Enrutador();
     //Constructor del objeto
     Enrutador(char nombre);
 
@@ -23,9 +24,14 @@ public:
 
     char obtenerNombre() ;
 
+    map<char,int>obtenerTablaEnrutamiento();
+
     int obtenerCosto(char destino);
 
+    void actualizarTablaEnrutamiento(map<char,int> tablaEnrutamiento);
+
     void imprimirTablaEnrutamiento();
+
 
 
 

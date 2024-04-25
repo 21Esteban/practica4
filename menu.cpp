@@ -4,7 +4,7 @@
 #include"enrutador.h"
 #include<string>
 #include"red.h"
-
+/*
 using namespace std;
 
 void mostrarMenu(Red &red) {
@@ -65,3 +65,4 @@ void crearEnrutador(Red &red){
     red.mostrarEnrutadores();
 
 }
+*/

@@ -1,33 +1,44 @@
 #include <iostream>
+#include<string>
 #include "red.h"
 #include "enrutador.h"
 #include "menu.h"
 
 using namespace std;
 
+string filename = "C:/Users/moroc/Desktop/PracticasInfo/practica4/build/Desktop-Debug/debug/red_prueba.txt";
+
 int main()
 {
     Red red;
+    red.setearEnrutadoresDesdeArchivo(filename);
 
-    mostrarMenu(red);
+    //agregar enrutadores de forma manual sin archivo txt
 
-    Enrutador router1('a');
-    Enrutador router2('b');
-
-    router1.agregarEnlace('b',4);
-    router1.agregarEnlace('c',2);
-    router1.imprimirTablaEnrutamiento();
-    router1.eliminarEnlace('b');
-    router1.imprimirTablaEnrutamiento();
+   /* red.agregarEnrutador('a');
+    red.agregarEnrutador('b');
+    red.agregarEnrutador('c');
+    red.agregarEnrutador('d');*/
 
 
-    red.mostrarEnrutadores();
-    red.agregarEnrutador(router1);
-    red.agregarEnrutador(router2);
+//nos muestras los enrutadores y sus rutas y costos
     red.mostrarEnrutadores();
 
+//nos muestra un enrutador y su ruta y costos
+    //red.obtenerEnrutador('A');
+   /* red.obtenerEnrutador('a');
+    red.enlazarEnrutadores('a','b',5);
+    red.enlazarEnrutadores('c','b',10);
+    red.enlazarEnrutadores('d','b',10);
+    red.enlazarEnrutadores('d','a',10);
+    red.enlazarEnrutadores('z','a',10);
+    red.obtenerEnrutador('a');*/
 
-    cout << "Hello World!" << endl;
+    //cout << "Hello World!" << endl;
+
+    //ruta mas corta
+
+    red.rutaMasCorta('A','E');
     return 0;
 
 
