@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string filename = "C:/Users/moroc/Desktop/PracticasInfo/practica4/build/Desktop-Debug/debug/red_prueba.txt";
+string filename = "C:/Users/laura/OneDrive/Desktop/practica4/red_prueba.txt";
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
 
 
 //nos muestras los enrutadores y sus rutas y costos
-    red.mostrarEnrutadores();
+  //  red.mostrarEnrutadores();
 
 //nos muestra un enrutador y su ruta y costos
     //red.obtenerEnrutador('A');
@@ -38,8 +38,11 @@ int main()
 
     //ruta mas corta
 
-    red.rutaMasCorta('A','E');
+
+    //MENU PARA EJECUTAR EL PROGRAMA .
+    mostrarMenu(red);
     return 0;
+
 
 
 }

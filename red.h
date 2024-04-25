@@ -22,6 +22,8 @@ public:
     void enlazarEnrutadores(char Enrutador1, char Enrutador2, int costo) ;
     void setearEnrutadoresDesdeArchivo(string filename);
     pair<int, vector<char>>rutaMasCorta(char enrutadorInicio, char enrutadorFinal);
+    int costoDePaquete(char enrutadorInicio, char enrutadorFinal);
+    void generarRedAleatoria(int numeroDeRouters);
 };
 
 #endif // RED_H

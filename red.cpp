@@ -141,3 +141,24 @@ pair<int, vector<char>> Red::rutaMasCorta(char enrutadorInicio, char enrutadorFi
 
 
 
+int Red::costoDePaquete(char enrutadorInicio, char enrutadorFinal) {
+    auto [cost, path] = rutaMasCorta(enrutadorInicio, enrutadorFinal);
+    return cost;
+}
+
+void Red::generarRedAleatoria(int numeroDeRouters) {
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(1, 10);
+    for (int i = 0; i < numeroDeRouters; ++i) {
+        char nombreEnrutador = 'A' + i; // Genera nombres de enrutadores como A, B, C, etc.
+        agregarEnrutador(nombreEnrutador);
+        for (int j = 0; j < i; ++j) {
+            char nombreEnrutador2 = 'A' + j;
+            if (dis(gen) < 6) {
+                int cost = dis(gen);
+                enlazarEnrutadores(nombreEnrutador, nombreEnrutador2, cost);
+            }
+        }
+    }
+}

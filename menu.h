@@ -5,6 +5,8 @@
 
 //prototipo de la funcion menu
 void mostrarMenu(Red &red);
-void crearEnrutador(Red &red);
+char recibirCaracter();
+void recibirCaracteres(char &caracter1 , char &caracter2);
+
 
 #endif // MENU_H
